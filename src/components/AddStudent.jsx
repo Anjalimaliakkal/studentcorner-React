@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import NavBar from './NavBar'
 import axios from 'axios'
 
 const AddStudent = () => {
@@ -27,7 +28,7 @@ const AddStudent = () => {
         ).catch()
     }
     return (
-        <div>
+        <div><NavBar />
             <h1><center>STUDENT REGISTRATION</center></h1>
             <br></br>
             <div className="container">
