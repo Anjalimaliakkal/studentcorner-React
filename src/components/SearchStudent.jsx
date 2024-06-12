@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-
+import NavBar from './NavBar'
 const SearchStudent = () => {
     const [data, setData] = useState(
         {
@@ -36,7 +36,7 @@ const SearchStudent = () => {
     }
     return (
         <div>
-            
+            <NavBar/>
             <h1><center>SEARCH STUDENTS</center></h1>
             <br></br>
             <div className="container">
