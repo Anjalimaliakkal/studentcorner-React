@@ -8,7 +8,20 @@ const SearchStudent = () => {
         }
     )
     
-
+    const [result, setResult] = useState([])
+    const deleteStudent = (id) => {
+        let input = { "_id": id }
+        axios.post("http://localhost:8081/delete",input).then(
+            (response) => {
+                console.log(response.data)
+                if (response.data.status == "success") {
+                    alert("deleted succesfully")
+                } else {
+                    alert("error in deletion")
+                }
+            }
+        ).catch().finally()
+    }
     const inputHandler = (event) => {
         setData({ ...data, [event.target.name]: event.target.value })
     }
